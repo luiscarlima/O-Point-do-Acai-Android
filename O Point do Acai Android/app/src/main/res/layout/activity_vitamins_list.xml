@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context=".VitaminsList">
+
+    <ir.alirezaiyan.arclayout.ArcRelativeLayout
+        android:id="@+id/aarrccttct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:arc_top_cropCurve="cropConcave"
+        app:arc_bottom_height="20dp"
+        app:arc_bottom_position="true"
+        app:arc_top_position="false">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/vitamins_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/gradient_color_purple"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+        </android.support.v7.widget.Toolbar>
+
+    </ir.alirezaiyan.arclayout.ArcRelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/aarrccttct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_vitamins"
+            android:layout_margin="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_vitamins"
+            style="?android:attr/indeterminateProgressStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart"
+    android:id="@+id/rootLayout"
+    android:background="#f1f1f1">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout_cart"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/card_view_cartbtntotal"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ir.alirezaiyan.arclayout.ArcRelativeLayout
+                android:id="@+id/aarcc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:arc_top_cropCurve="cropConcave"
+                app:arc_bottom_height="20dp"
+                app:arc_bottom_position="true"
+                app:arc_top_position="false">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_id_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/gradient_color_purple"
+                    app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+
+                </android.support.v7.widget.Toolbar>
+
+            </ir.alirezaiyan.arclayout.ArcRelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_cart"
+                android:layout_below="@+id/aarcc"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_cart_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:backgroundTint="@color/colorAccent"
+            app:elevation="6dp"
+            app:layout_anchor="@+id/toolbar_id_cart"
+            app:layout_anchorGravity="end|bottom|right"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_add_white_24dp" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/card_view_cartbtntotal"
+        android:layout_alignParentBottom="true"
+        android:background="#f1f1f1"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <RelativeLayout
+            android:id="@+id/cart_relat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/cart_linear_layout"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/txt_total"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_sans_pro"/>
+
+                <TextView
+                    android:id="@+id/total"
+                    android:text="@string/txt_carregando"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_sans_pro"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirmar_pedido"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorTextWithe"
+                android:textAlignment="center"
+                android:text="@string/btn_text_confirmar_pedido"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+               android:layout_margin="20dp"
+                android:background="@drawable/button_main_background"
+                android:elevation="8dp"
+                android:layout_alignParentBottom="true"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

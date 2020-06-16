@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderStatus">
+
+    <ir.alirezaiyan.arclayout.ArcRelativeLayout
+        android:id="@+id/aarrcctt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:arc_top_cropCurve="cropConcave"
+        app:arc_bottom_height="20dp"
+        app:arc_bottom_position="true"
+        app:arc_top_position="false">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_id_orders"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/gradient_color_purple"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+
+        </android.support.v7.widget.Toolbar>
+
+    </ir.alirezaiyan.arclayout.ArcRelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_info_orders"
+        android:layout_below="@+id/aarrcctt"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="#bdbdbd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listOrders"
+        android:layout_below="@+id/txt_info_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_orders"
+        style="?android:attr/indeterminateProgressStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

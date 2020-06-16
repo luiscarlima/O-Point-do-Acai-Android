@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:font" tools:targetApi="o">@font/source_sans_pro</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="MyAppTheme" parent="Theme.MaterialComponents">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:font" tools:targetApi="o">@font/source_sans_pro</item>
+    </style>
+
+    <style name="AppCompat.TelaCheia" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:font" tools:targetApi="o">@font/source_sans_pro</item>
+    </style>
+
+    <style name="LoginTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Required for sign-in flow styling -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/material_500</item>
+        <item name="colorControlActivated">@color/material_a700</item>
+        <item name="colorControlHighlight">@color/material_a200</item>
+        <item name="fontFamily">@font/source_sans_pro</item>
+        <item name="android:font" tools:targetApi="o">@font/source_sans_pro</item>
+    </style>
+
+    <style name="MainTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:font" tools:targetApi="o">@font/source_sans_pro</item>
+    </style>
+
+    <style name="CheckBoxTheme">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="CheckBoxTheme2">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorTextWithe</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+    </style>
+
+</resources>

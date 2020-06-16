@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_stepview"
+    android:background="@drawable/dialog_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/first_step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stepview_bg">
+
+            <com.shuhart.stepview.StepView
+                android:id="@+id/step_view_cart"
+                android:layout_width="209dp"
+                android:layout_height="37dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="16dp"
+                app:sv_animationType="All"
+                app:sv_stepPadding="12dp"
+                app:sv_steps="@array/steps"
+                app:sv_typeface="@font/source_sans_pro" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_step"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view_stepview"
+                android:layout_width="260dp"
+                android:layout_height="130dp"
+                app:lottie_fileName="observation.json"
+                app:lottie_loop="true"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:layout_centerHorizontal="true"
+                app:lottie_autoPlay="true" />
+
+
+            <TextView
+                android:id="@+id/txt_dialog_adress_stepview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/animation_view_stepview"
+                android:layout_margin="0dp"
+                android:text="Observação no Pedido?"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/edt_observ_stepview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_dialog_adress_stepview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_background_dialog"
+                android:hint="Digite aqui, caso precise, uma observação sobre o pedido..."
+                android:inputType="textMultiLine"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp"
+                android:textSize="14sp"
+                android:textColor="#646464"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_prox_stepview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_observ_stepview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_main_background"
+                android:textColor="@color/colorTextWithe"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Próximo"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_step_1"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view_stepview1"
+                android:layout_width="260dp"
+                android:layout_height="130dp"
+                app:lottie_fileName="animation_three.json"
+                app:lottie_loop="true"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:layout_centerHorizontal="true"
+                app:lottie_autoPlay="true" />
+
+
+            <TextView
+                android:id="@+id/txt_dialog_adress_stepview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/animation_view_stepview1"
+                android:layout_margin="0dp"
+                android:text="Delivery ou Retira?"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:textSize="20dp"/>
+
+            <Button
+                android:id="@+id/btn_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_dialog_adress_stepview1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_main_background"
+                android:textColor="@color/colorTextWithe"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Delivery"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_retira"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_delivery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_main_background"
+                android:textColor="@color/colorTextWithe"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Retira"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_step_2"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation_view_stepview2"
+                        android:layout_width="260dp"
+                        android:layout_height="110dp"
+                        app:lottie_fileName="animation_two.json"
+                        app:lottie_loop="true"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:layout_centerHorizontal="true"
+                        app:lottie_autoPlay="true" />
+
+                    <TextView
+                        android:id="@+id/txt_dialog_adress_stepview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_below="@+id/animation_view_stepview2"
+                        android:text="Qual o endereço de entrega?"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16dp"/>
+
+                    <EditText
+                        android:id="@+id/edt_cep_stepview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_dialog_adress_stepview2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:background="@drawable/input_background_dialog"
+                        android:maxLength="8"
+                        android:hint="CEP..."
+                        android:inputType="numberSigned"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/edt_rua_stepview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edt_cep_stepview"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:background="@drawable/input_background_dialog"
+                        android:hint="Rua..."
+                        android:inputType="text"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/edt_num_stepview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edt_rua_stepview"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:background="@drawable/input_background_dialog"
+                        android:hint="Nº..."
+                        android:inputType="numberSigned"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/edt_bairro_stepview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edt_num_stepview"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:background="@drawable/input_background_dialog"
+                        android:hint="Bairro..."
+                        android:inputType="text"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/spinner_cidade_stepview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edt_bairro_stepview"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:background="@drawable/input_background_dialog"
+                        android:entries="@array/cidades_array"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="14sp"
+                        android:visibility="visible">
+                    </Spinner>
+
+                    <TextView
+                        android:id="@+id/txt_dialog_frete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_below="@+id/spinner_cidade_stepview"
+                        android:text="Frete R$ 00,00"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="18dp"/>
+
+                    <Button
+                        android:id="@+id/btn_prox_stepview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_dialog_frete"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_main_background"
+                        android:textColor="@color/colorTextWithe"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:text="Próximo"
+                        android:textAllCaps="false"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_step_3"
+            android:visibility="gone"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view_stepview3"
+                android:layout_width="260dp"
+                android:layout_height="110dp"
+                app:lottie_fileName="animation_payment.json"
+                app:lottie_loop="true"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:layout_centerHorizontal="true"
+                app:lottie_autoPlay="true" />
+
+            <TextView
+                android:id="@+id/txt_dialog_total_stepview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/animation_view_stepview3"
+                android:text="Total R$ 00,00"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:textSize="18dp"/>
+
+
+            <TextView
+                android:id="@+id/txt_dialog_adress_stepview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_below="@+id/txt_dialog_total_stepview3"
+                android:text="Qual a forma de pagamento?"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"/>
+
+
+            <RadioGroup
+                android:id="@+id/radio_group_stepview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_dialog_adress_stepview3"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp">
+
+                <RadioButton
+                    android:id="@+id/rdiCOD_stepview3"
+                    android:text="Dinheiro"
+                    android:textSize="14dp"
+                    android:layout_margin="2dp"
+                    android:textColor="@color/colorSecondaryText"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/rdiCard_stepview3"
+                    android:text="Cartão"
+                    android:textSize="14dp"
+                    android:layout_margin="2dp"
+                    android:textColor="@color/colorSecondaryText"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/rdiCardCOD_stepview3"
+                    android:text="Dinheiro e Cartão"
+                    android:textSize="14dp"
+                    android:layout_margin="2dp"
+                    android:textColor="@color/colorSecondaryText"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_dialog_stepview3_troco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_group_stepview2"
+                android:layout_marginTop="10dp"
+                android:text="Precisa de Troco? Para quanto?"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0dp"
+                android:textSize="16dp"/>
+
+            <EditText
+                android:id="@+id/edt_troco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_dialog_stepview3_troco"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:background="@drawable/input_background_dialog"
+                android:maxLength="8"
+                android:hint="R$ 00,00"
+                android:visibility="gone"
+                android:inputType="numberDecimal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="10dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_finalizar_stepview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_troco"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_main_background"
+                android:textColor="@color/colorTextWithe"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Confirmar Pedido"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

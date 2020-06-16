@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".JuiceDoubleFragment">
+
+    <android.support.v7.widget.CardView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="6dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txt_two_juices"
+                android:text="Escolha os dois sabores para combinar!"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorSecondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"/>
+
+            <TextView
+                android:id="@+id/txt_valor_juices"
+                android:text="Preço R$ 0.00"
+                android:textSize="18sp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_below="@+id/txt_two_juices"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"/>
+
+            <TextView
+                android:id="@+id/txt_sabor_um"
+                android:layout_below="@+id/txt_valor_juices"
+                android:text="Escolha um sabor:"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorSecondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"/>
+
+            <Spinner
+                android:id="@+id/spinner_sabor_um"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_sabor_um"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:background="@drawable/gradient_spinner"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="15dp"
+                android:textSize="14sp"
+                android:visibility="visible">
+            </Spinner>
+
+            <TextView
+                android:id="@+id/txt_sabor_dois"
+                android:layout_below="@+id/spinner_sabor_um"
+                android:text="Escolha outro sabor:"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/colorSecondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"/>
+
+            <Spinner
+                android:id="@+id/spinner_sabor_dois"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_sabor_dois"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:background="@drawable/gradient_spinner"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="15dp"
+                android:textSize="14sp"
+                android:visibility="visible">
+            </Spinner>
+
+            <Button
+                android:id="@+id/btn_combinar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_sabor_dois"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/button_main_background"
+                android:textColor="@color/colorTextWithe"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Combinar Sabores"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

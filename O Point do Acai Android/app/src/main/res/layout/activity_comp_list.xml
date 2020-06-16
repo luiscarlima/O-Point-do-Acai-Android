@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:theme="@style/MyAppTheme"
+    tools:context=".CompList">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_comp_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ir.alirezaiyan.arclayout.ArcRelativeLayout
+            android:id="@+id/aarrcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:arc_top_cropCurve="cropConcave"
+            app:arc_bottom_height="20dp"
+            app:arc_bottom_position="true"
+            app:arc_top_position="false">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_comps"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/gradient_color_purple"
+                app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+            </android.support.v7.widget.Toolbar>
+
+        </ir.alirezaiyan.arclayout.ArcRelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tabs_layout_comps"
+            android:layout_below="@+id/aarrcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f1f1f1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mousse_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/source_sans_pro"
+                android:padding="6dp"
+                android:gravity="center"
+                android:text="Mousses"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/fruta_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/source_sans_pro"
+                android:padding="6dp"
+                android:gravity="center"
+                android:text="Frutas"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/comp_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/source_sans_pro"
+                android:padding="6dp"
+                android:gravity="center"
+                android:text="Complementos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cobertura_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/source_sans_pro"
+                android:padding="6dp"
+                android:gravity="center"
+                android:text="Coberturas"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/limited_edition_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/source_sans_pro"
+                android:padding="6dp"
+                android:gravity="center"
+                android:text="Cremes"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_comps"
+            android:layout_below="@+id/tabs_layout_comps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp">
+
+        </android.support.v4.view.ViewPager>
+
+    </RelativeLayout>
+
+    <android.support.design.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:fabAlignmentMode="center">
+
+    </android.support.design.bottomappbar.BottomAppBar>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:src="@drawable/cart_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/bottom_app_bar"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/indeterminateProgressStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
+
+</android.support.design.widget.CoordinatorLayout>

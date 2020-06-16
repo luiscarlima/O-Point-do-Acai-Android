@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:id="@+id/rootLayout">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/signup_background_new"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:text="Faça seu\nCadastro"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <ProgressBar
+            android:id="@+id/registerProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true"
+            android:indeterminateTint="#FFF"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/edt_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/input_background"
+            android:hint="Nome"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="#646464"
+            android:textSize="16sp"
+            android:textColorHint="#818181" />
+
+        <EditText
+            android:id="@+id/edt_tel"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_background"
+            android:hint="Telefone"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textColor="#646464"
+            android:textColorHint="#818181" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_background"
+            android:hint="Email"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="#646464"
+            android:textColorHint="#818181" />
+
+        <EditText
+            android:id="@+id/edt_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_background"
+            android:hint="Senha"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="#646464"
+            android:textColorHint="#818181" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkbox_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/CheckBoxTheme2"/>
+
+            <TextView
+                android:id="@+id/txt_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceitar Termos e Condições de Uso"
+                android:textColor="#FFF"
+                android:layout_marginEnd="30dp"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/source_sans_pro"
+                android:layout_toRightOf="@+id/checkbox_terms"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_cadastrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/round_arrow_forward_24"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:tint="@android:color/white"
+                android:layout_marginBottom="20dp"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                android:backgroundTint="#00E676"
+                app:fabCustomSize="60dp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="30dp"
+                android:text="Cadastrar"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:padding="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="30dp"
+                android:padding="15dp"
+                android:text="Entrar"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

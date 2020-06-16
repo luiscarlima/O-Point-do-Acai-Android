@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context=".TypeFruitSalads">
+
+    <ir.alirezaiyan.arclayout.ArcRelativeLayout
+        android:id="@+id/arctypesfruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:arc_top_cropCurve="cropConcave"
+        app:arc_bottom_height="20dp"
+        app:arc_bottom_position="true"
+        app:arc_top_position="false">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_tfs"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/gradient_color_purple"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+        </android.support.v7.widget.Toolbar>
+
+    </ir.alirezaiyan.arclayout.ArcRelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/fs_cv"
+        android:layout_below="@+id/arctypesfruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#f1f1f1"
+        android:foreground="?attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/fs_txt_name"
+                android:text="Composição da Salada de Frutas:"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"/>
+
+            <TextView
+                android:id="@+id/fs_txt_comp"
+                android:text="Composição: Abacaxi, Banana, Kiwi, Maçã, Manga, Mamão, Morango e Pêssego em Caldas"
+                android:layout_below="@+id/fs_txt_name"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="1dp"
+                android:textColor="@color/colorSecondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_of_tfs"
+        android:layout_below="@+id/fs_cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:duplicateParentState="false"
+        android:gravity="center">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_tfs"
+            android:layout_margin="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_fruit_salads_types"
+            style="?android:attr/indeterminateProgressStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

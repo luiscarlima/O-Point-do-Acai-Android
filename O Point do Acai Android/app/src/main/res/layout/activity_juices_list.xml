@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context=".JuicesList">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_id_juices"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_color_purple"
+        app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/tabs_layout"
+        android:layout_below="@+id/toolbar_id_juices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTextWithe"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/milk_pager_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/source_sans_pro"
+            android:padding="15dp"
+            android:text="Com Leite"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/water_pager_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/source_sans_pro"
+            android:padding="15dp"
+            android:text="Com Água"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/double_pager_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/source_sans_pro"
+            android:padding="15dp"
+            android:text="Dois Sabores"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_id"
+        android:layout_below="@+id/tabs_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_juices"
+        style="?android:attr/indeterminateProgressStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

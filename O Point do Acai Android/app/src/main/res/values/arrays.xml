@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="cidades_array">
+        <item>Selecione a Cidade</item>
+        <item>Mogi Mirim</item>
+    </string-array>
+    
+</resources>

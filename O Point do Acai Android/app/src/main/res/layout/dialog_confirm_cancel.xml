@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/card_view_dialog"
+    android:background="@drawable/dialog_bg">
+    
+    <RelativeLayout
+        android:id="@+id/rl_card_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/txt_main_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmar Pedido?"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txt_tipo_dialog"
+            android:layout_below="@+id/txt_main_dialog"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carregando..."
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txt_comp_dialog"
+            android:layout_below="@+id/txt_tipo_dialog"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carregando..."
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt_total_dialog"
+            android:layout_below="@+id/txt_comp_dialog"
+            android:layout_marginTop="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt_valor_dialog"
+            android:layout_below="@+id/txt_total_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carregando..."
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"/>
+
+
+        <LinearLayout
+            android:layout_below="@+id/txt_valor_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/card_dialog_btn_confirm"
+                android:layout_width="113dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:text="Confirmar"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:background="@drawable/button_main_background"
+                android:elevation="5dp"/>
+
+            <Button
+                android:id="@+id/card_dialog_btn_cancel"
+                android:layout_width="113dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="Cancelar"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:background="@drawable/button_main_background"
+                android:elevation="5dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

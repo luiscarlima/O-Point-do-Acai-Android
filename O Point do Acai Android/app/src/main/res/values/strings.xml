@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">O Point do Acai</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="loginok">Seja bem vindo!</string>
+    <string name="logindown">Erro ao tentar efetuar Login</string>
+
+    <string name="ok">OK</string>
+
+    <string name="facebook_application_id" translatable="false">263710507722329</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb263710507722329</string>
+
+    <string name="cart">Pedidos</string>
+
+    <string-array name="sizes">
+        <item>200 ml</item>
+        <item>300 ml</item>
+        <item>400 ml</item>
+        <item>500 ml</item>
+        <item>700 ml</item>
+    </string-array>
+
+    <string name="default_notification_channel_id">OPDA_01</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="example_tel">(19) 0 0000–0000</string>
+    <string name="msg_digit_cel">Digite abaixo o número do seu celular</string>
+    <string name="msg_click_next">Clique em Próximo Passo para verificar seu número de celular. Fique tranquilo, seus dados estarão seguros e protegidos.</string>
+    <string name="msg_next_pass">Próximo Passo</string>
+    <string name="msg_wait_loader">Aguarde. O código de verificação será enviado por SMS e será reconhecido automaticamente.</string>
+    <string name="txt_number_fmt">+918372890302</string>
+    <string name="txt_continuar">Proximo Passo</string>
+    <string name="txt_nao_recebi_o_codigo"> </string>
+    <string name="info_click_continuar">Clique em Proximo Passo para aceitar os Termos de Serviço e Condições…</string>
+    <string name="info_number_verifyed">Perfeito! Seu número foi verificado com sucesso! Agora, Digite seu nome abaixo e clique em Continuar.</string>
+    <string name="edt_txt_name">Digite seu Nome</string>
+    <string name="txt_total">Total:</string>
+    <string name="txt_carregando">Carregando…</string>
+    <string name="btn_text_confirmar_pedido">Confirmar Pedido</string>
+    <string name="txt_prox">Continuar</string>
+
+</resources>

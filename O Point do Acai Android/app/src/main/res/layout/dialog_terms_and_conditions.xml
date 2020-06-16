@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/dialog_termos"
+    android:background="@drawable/dialog_bg">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/rl_card_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Termos e Condições de Uso"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O QUE FAREMOS COM SUAS INFORMAÇÕES?"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quando você realiza um pedido em nosso aplicativo, como parte do processo de recebimento, autenticidade e envio deste pedido, coletamos as informações pessoais que você nos dá tais como: nome, numero de celular e endereço. Utilizaremos estas informações apenas para fins de lhes atender da melhor forma possível.\n\nAsseguramos que, todas as informações a serem fornecidas, serão apenas utilizadas pela nossa equipe. De forma sensata e profissional, mantendo assim sempre a integridade física e moral de nossos clientes."
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONSENTIMENTO"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Como vocês obtêm meu consentimento?\n\nQuando você fornece informações pessoais como nome, telefone e endereço, para completar: fazer um pedido ou providenciar uma entrega. Após a realização de ações entendemos que você está de acordo com a coleta de dados para serem utilizados pela nossa empresa.\n\nSe pedimos por suas informações pessoais por uma razão secundária, como marketing, vamos lhe pedir diretamente por seu consentimento, ou lhe fornecer a oportunidade de dizer não.\n\nE caso você queira retirar seu consentimento, como proceder?\n\nSe após você nos fornecer seus dados, você mudar de ideia, você pode retirar o seu consentimento para que possamos entrar em contato, para uso de suas informações, a qualquer momento, entrando em contato conosco em janderm@gmail.com, pelo telefone +55 19 3549-7002, por Whats App para +55 19 99718-7698 ou +55 19 97414-7236 ou nos enviando uma correspondência para: O Point do Açaí, Av. 22 de Outubro, 355 – Jardim Santa Helena, Mogi Mirim – SP, 13806-050."
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIVULGAÇÃO"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Podemos divulgar suas informações pessoais caso sejamos obrigados pela lei para fazê-lo."
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEGURANÇA"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Para proteger suas informações pessoais, tomamos precauções razoáveis e seguimos as melhores práticas da indústria para nos certificar que elas não serão perdidas inadequadamente, usurpadas, acessadas, divulgadas, alteradas ou destruídas.\n\nTodas as informações por você fornecidas, estarão salvas e protegidas pela melhor tecnologia atual: Firebase Authentication da Empresa Google LLC."
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALTERAÇÕES PARA ESSES TERMOS E CONDIÇÕES"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reservamos o direito de modificar essa política de privacidade a qualquer momento, então por favor, revise-a com frequência. Alterações e esclarecimentos vão surtir efeito imediatamente após sua publicação no site. Se fizermos alterações de materiais para essa política, iremos notificá-lo aqui que eles foram atualizados, para que você tenha ciência sobre quais informações coletamos, como as usamos, e sob que circunstâncias, se alguma, usamos e/ou divulgamos elas."
+                android:textSize="12sp"/>
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/dialog_close_ok"
+                android:layout_width="113dp"
+                android:layout_height="46dp"
+                android:text="OK"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:background="@drawable/button_main_background"
+                android:elevation="5dp"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

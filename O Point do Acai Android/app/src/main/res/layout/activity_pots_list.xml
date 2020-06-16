@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context=".PotsList">
+
+    <ir.alirezaiyan.arclayout.ArcRelativeLayout
+        android:id="@+id/arcpots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:arc_top_cropCurve="cropConcave"
+        app:arc_bottom_height="20dp"
+        app:arc_bottom_position="true"
+        app:arc_top_position="false">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/pots_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/gradient_color_purple"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            android:outlineSpotShadowColor="#000">
+        </android.support.v7.widget.Toolbar>
+
+    </ir.alirezaiyan.arclayout.ArcRelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/arcpots"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pots_txt"
+            android:text="Escolha o Tamanho do Pote"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/source_sans_pro"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_pots"
+            android:layout_margin="6dp"
+            android:layout_below="@+id/pots_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_pots"
+            style="?android:attr/indeterminateProgressStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

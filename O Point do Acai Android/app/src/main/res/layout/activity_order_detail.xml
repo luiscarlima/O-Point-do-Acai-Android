@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context=".OrderDetail">
+
+    <ir.alirezaiyan.arclayout.ArcRelativeLayout
+        android:id="@+id/arcorderdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:arc_top_cropCurve="cropConcave"
+        app:arc_bottom_height="20dp"
+        app:arc_bottom_position="true"
+        app:arc_top_position="false">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_order_detail"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/gradient_color_purple"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp">
+
+        </android.support.v7.widget.Toolbar>
+
+    </ir.alirezaiyan.arclayout.ArcRelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/arcorderdetail"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/order_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="6dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/order_id_det"
+                        android:text="Pedido"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                    <TextView
+                        android:id="@+id/order_person_name_det"
+                        android:text="Nome"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/order_id_det"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                    <TextView
+                        android:id="@+id/order_phone_det"
+                        android:text="Celular"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/order_person_name_det"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                    <TextView
+                        android:id="@+id/order_address_det"
+                        android:text="Endereço"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/order_phone_det"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                    <TextView
+                        android:id="@+id/order_payment_method_det"
+                        android:text="Metodo de Pagamento"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/order_address_det"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                    <TextView
+                        android:id="@+id/order_payment_troco_det"
+                        android:text="Troco"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/order_payment_method_det"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                    <TextView
+                        android:id="@+id/order_expedition_det"
+                        android:text="Metodo de Entrega"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/order_payment_troco_det"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                    <TextView
+                        android:id="@+id/order_status_det"
+                        android:text="Status"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/order_expedition_det"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                    <TextView
+                        android:id="@+id/order_total_det"
+                        android:text="Valor Total"
+                        android:layout_below="@+id/order_status_det"
+                        android:textSize="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/source_sans_pro"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_below="@+id/order_info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Produtos Pedidos"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_sans_pro"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lstFoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
